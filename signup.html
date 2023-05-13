@@ -3,13 +3,26 @@
 <head>
   <title>Signup</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+      body {
+      font-family: Helvetica,Arial ,sans-serif;
+      background-image: url("bg1.jpg");
+    }
+
+    h2{
+      text-align: center;
+      color: white;
     }
     
-    .container {
+    .container-items{
       width: 300px;
       margin: 0 auto;
+    }
+    .container{
+      background-color: rgba(0, 0, 0, 0.517);
+      width: 40%;
+      padding: 2rem .5rem;
+      display: flex;
+      margin: 10rem auto;
     }
     
     input[type="text"],
@@ -21,20 +34,28 @@
 
     }
     input[type="submit"]{
-      width: 20%;
-      padding: 5px;
+      width: 10rem;
+      padding: 1rem ;
+      margin: 0;
+      background-color: #1B9C85;
+      border: 1px solid rgba(27, 31, 35, .15); 
+      box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+      font-size: .8rem;
+      border-radius: 999px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Signup</h2>
-    <form id="signup-form" action="login.html" method="post">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" value="Signup">
-    </form>
-  </div>
+    <div class="container">
+      <div class="container-items">
+        <h2>Signup</h2>
+        <form id="signup-form" action="login.html" method="post">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="submit" value="Signup">
+        </form>
+      </div>
+    </div>
 
   <script src="index.js"></script>
 </body>

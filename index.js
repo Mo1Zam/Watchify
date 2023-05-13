@@ -141,3 +141,43 @@ window.addEventListener('load',function() {
         else header.classList.remove('black-bg');
     })
 })
+
+
+// Sign-up
+
+// Listen for form submissions
+document.getElementById("login-form").addEventListener("submit", login);
+document.getElementById("signup-form").addEventListener("submit", signup);
+
+// Function to handle login form submission
+function login(event) {
+  event.preventDefault();
+  // Get form values
+  var username = document.getElementsByName("username")[0].value;
+  var password = document.getElementsByName("password")[0].value;
+  
+  // Perform login validation (dummy example)
+  if (username === "admin" && password === "password") {
+    window.location.href = "index.html"; // Redirect to dashboard page
+  } else {
+    alert("Invalid username or password. Please try again.");
+  }
+}
+
+// Function to handle signup form submission
+function signup(event) {
+  event.preventDefault();
+  // Get form values
+  var username = document.getElementsByName("username")[1].value;
+  var password = document.getElementsByName("password")[1].value;
+  
+  // Perform signup validation (dummy example)
+  if (username !== "" && password !== "") {
+    alert("Signup successful!");
+    // Redirect to login page after successful signup
+    window.location.href = "login.html";
+  } else {
+    alert("Please fill in all the fields.");
+  }
+}
+
